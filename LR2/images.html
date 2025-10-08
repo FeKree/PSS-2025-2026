@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Демонстрация Изображений</title>
+    <style>
+        body { background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/html-examples.jpeg"); } /* Point 12: Common background */
+    </style>
+</head>
+<body>
+
+<h1>Изображения в HTML (Point 9)</h1>
+
+<!-- As background (via CSS) -->
+<div style="background-image: url('https://codeconvey.com/wp-content/uploads/2020/09/photo-gallery-for-website-html-code.png.webp'); width: 300px; height: 200px;">Фон изображения</div>
+
+<!-- As image -->
+<img src="https://www.webfx.com/wp-content/uploads/2021/10/html5_canvas_example_02canvas_cycle.jpg" alt="Картинка">
+
+<!-- As button -->
+<button style="background: none; border: none;"><img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/html-examples.jpeg" alt="Кнопка" width="100"></button>
+
+<h2>Responsive Изображение (Point 10)</h2>
+<picture>
+    <source media="(min-width: 650px)" srcset="https://cloudinary-marketing-res.cloudinary.com/images/w_500,c_scale/v1680288073/CY0122-1-2/CY0122-1-2-png?_i=AA">
+    <source media="(min-width: 465px)" srcset="https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/adc13334-06ab-4732-bb0a-80acb71cda07/sizes.jpg">
+    <img src="https://cloudinary-marketing-res.cloudinary.com/images/w_500,c_scale/v1680288073/CY0122-1-2/CY0122-1-2-png?_i=AA" alt="Responsive" style="width:auto;">
+</picture>
+
+<h2>Изображение с Подписью (Point 11)</h2>
+<figure>
+    <img src="https://codeconvey.com/wp-content/uploads/2020/09/photo-gallery-for-website-html-code.png.webp" alt="Изображение">
+    <figcaption>Подпись к изображению</figcaption>
+</figure>
+
+<h2>Несколько Изображений с Общей Подписью (Point 12)</h2>
+<figure>
+    <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/html-examples.jpeg" alt="Img1" width="200">
+    <img src="https://codeconvey.com/wp-content/uploads/2020/09/photo-gallery-for-website-html-code.png.webp" alt="Img2" width="200">
+    <img src="https://www.webfx.com/wp-content/uploads/2021/10/html5_canvas_example_02canvas_cycle.jpg" alt="Img3" width="200">
+    <figcaption>Общая подпись для изображений</figcaption>
+</figure>
+
+<a href="index.html">Назад на главную</a>
+
+</body>
+</html>
