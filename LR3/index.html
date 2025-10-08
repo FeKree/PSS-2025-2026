@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации пациента на госпитализацию</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 200px;
+            padding: 5px;
+        }
+        .form-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            margin: 20px 0;
+            max-width: 100%;
+        }
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма регистрации пациента на госпитализацию</h1>
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DoiHJFEKNuN3dznddYzC6A9EXGKijmnNhw&s" alt="Hospital Registration Banner" onerror="this.style.display='none'; this.nextSibling.style.display='block';">
+    <div style="display:none; color:red;">Не удалось загрузить изображение.</div>
+
+    <form>
+        <div class="form-section">
+            <h3>Личная информация</h3>
+            <div class="form-group">
+                <label for="firstName">Имя:</label>
+                <input type="text" id="firstName" name="firstName" size="30" maxlength="50" tabindex="1" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Фамилия:</label>
+                <input type="text" id="lastName" name="lastName" size="30" maxlength="50" tabindex="2" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" tabindex="3" required>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Место проживания</h3>
+            <div class="form-group">
+                <label for="country">Страна:</label>
+                <select id="country" name="country" tabindex="4" required>
+                    <option value="">Выберите страну</option>
+                    <option value="ru">Россия</option>
+                    <option value="by">Беларусь</option>
+                    <option value="kz">Казахстан</option>
+                    <option value="ua">Украина</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Дата рождения</h3>
+            <div class="form-group">
+                <label for="birthDay">День:</label>
+                <select id="birthDay" name="birthDay" tabindex="5" required>
+                    <option value="">День</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="31">31</option>
+                </select>
+                <label for="birthMonth">Месяц:</label>
+                <select id="birthMonth" name="birthMonth" tabindex="6" required>
+                    <option value="">Месяц</option>
+                    <option value="01">Январь</option>
+                    <option value="02">Февраль</option>
+                    <option value="12">Декабрь</option>
+                </select>
+                <label for="birthYear">Год:</label>
+                <select id="birthYear" name="birthYear" tabindex="7" required>
+                    <option value="">Год</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="1900">1900</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Пол</h3>
+            <div class="form-group">
+                <label><input type="radio" name="gender" value="male" tabindex="8" required> Мужской</label>
+                <label><input type="radio" name="gender" value="female" tabindex="9"> Женский</label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Интересы</h3>
+            <div class="form-group">
+                <label><input type="checkbox" name="interests" value="reading" tabindex="10"> Чтение</label>
+                <label><input type="checkbox" name="interests" value="sports" tabindex="11"> Спорт</label>
+                <label><input type="checkbox" name="interests" value="music" tabindex="12"> Музыка</label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Примечание</h3>
+            <div class="form-group">
+                <label for="notes">Примечание:</label>
+                <textarea id="notes" name="notes" rows="5" tabindex="13">Укажите дополнительную информацию</textarea>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <input type="reset" value="Очистить форму" tabindex="14">
+            <input type="submit" value="Отправить данные" tabindex="15">
+        </div>
+    </form>
+</body>
+</html>
